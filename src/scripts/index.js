@@ -15,14 +15,22 @@ form.addEventListener("submit", (e) => {
     const password = document.querySelector("#password");
     const message = document.querySelector("#message");
     const checkbox = document.querySelector("#checkbox");
+    const button = document.querySelector("button");
+
+    // disabled as property on button in html is missing, but event listener wasn't working anyway
+    // checkbox.addEventListener("change", () => {
+    //     button.disabled = !button.disabled;
+    // })
 
     const user = {
         name : name.value,
         email : email.value,
         password : password.value,
         message :  message.value,
-        checkbox : checkbox.value,
+        checkbox : checkbox.checked,
     }
+    
+    console.log(user);
 
     const postUser = async () => {
         const response = await fetch("https://jsonplaceholder.typicode.com/users", {
