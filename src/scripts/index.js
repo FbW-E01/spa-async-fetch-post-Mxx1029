@@ -2,8 +2,8 @@
 import '../styles/main.scss';
 import "babel-polyfill";
 
-
 // \/ All of your javascript should go here \/
+
 
 const form = document.querySelector("#submit-form");
 
